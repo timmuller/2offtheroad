@@ -1,7 +1,39 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <h3>
-    <?php the_title(); ?>
-  </h3>
+
+<div class="article-definition"><i>Artikel</i> | <b>REIZEN</b></div>
+
+
+<?php
+  $title = "";
+  $main_title = "";
+  $sub_title = "";
+  ob_start();
+  the_title();
+  $title = ob_get_contents();
+  $title_split = strpos($title, "|");
+  if($title_split){
+    $main_title = substr($title, 0, $title_split);
+    $sub_title = substr($title, $title_split+1, strlen($title));
+  } else {
+    $main_title = $title;
+  }
+  ob_end_clean();
+?>
+
+  <h1>
+    <?php echo $main_title ?>
+  </h1>
+<?php 
+  if($sub_title){
+?>
+  <h2>
+    <?php echo $sub_title ?>
+  </h2>
+<?php
+  }
+?>
+
+<div class="seperate_title_content"></div>
 
 <?php
        $total_content = "";
@@ -13,9 +45,15 @@
         endwhile;
         $total_content = strip_shortcodes($total_content);
         $totallength = strlen($total_content);
-        $end_of_last_p_for_left = strpos($total_content, "\n", ($totallength / 2));
-        $left_column_content = substr($total_content, 0, $end_of_last_p_for_left);
-        $right_column_content = substr($total_content, $end_of_last_p_for_left, $totallength);
+	$break = strpos($total_content, "[BREAK]");
+	if(!$break){ 
+        	$break = strpos($total_content, "\n", ($totallength / 2));
+	} else {
+		$total_content = str_replace( "[BREAK]", "", $total_content );
+        	$totallength = strlen($total_content);
+	}
+        $left_column_content = substr($total_content, 0, $break);
+        $right_column_content = substr($total_content, $break, $totallength);
 
 
 ?>
