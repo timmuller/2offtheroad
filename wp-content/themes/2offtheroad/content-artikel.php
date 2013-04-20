@@ -4,7 +4,6 @@
   </h3>
 
 <?php
-
        $total_content = "";
         while ( have_posts() ) : the_post();
           ob_start();
