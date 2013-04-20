@@ -20,7 +20,6 @@
 
 ?>
 
-
   <div class="columnleft">
     <div class="columnspacing">
     <?php 
