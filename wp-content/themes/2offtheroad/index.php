@@ -15,6 +15,8 @@
 			$menu_hash[$menu_item->menu_item_parent]['submenu'][] = $menu_item;
 		}
 	   }
+		
+
 	   foreach ((array) $menu_hash as $key => $parent_menu){
 		$menu_content .= "<li class=\"dropdown\">";
 		if($parent_menu['submenu']){
@@ -27,16 +29,17 @@
 			$menu_content .= "<b class=\"caret\"></b>";
 		}
 		$menu_content .= "</a>";
-
-		foreach ($parent_menu['submenu'] as $child_menu){
+		if($parent_menu['submenu']){
 			$menu_content .= "<ul class=\"dropdown-menu\" aria-labelledby=\"drop1\" role=\"menu\">";
-			$menu_content .= "<li>";
-			$menu_content .= "<a href=\"". $child_menu->url ."\">";
-			$menu_content .= $child_menu->title;
-			$menu_content .= "</a>";
-			$menu_content .= "</li>";
+			foreach ($parent_menu['submenu'] as $child_menu){
+				$menu_content .= "<li>";
+				$menu_content .= "<a href=\"". $child_menu->url ."\">";
+				$menu_content .= $child_menu->title;
+				$menu_content .= "</a>";
+				$menu_content .= "</li>";
+			}
 			$menu_content .= "</ul>";
-		}
+  		}
 		$menu_content .= "</li>";
 	   }
 	   echo $menu_content;
