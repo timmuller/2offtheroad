@@ -6,8 +6,8 @@
 		$attachment = $attachments[0];
 ?>
 
-<!--	<?php echo $attachment->guid ?> -->
-	<iframe src="<?php echo $attachment->guid ?>" style="width:100%;height:100%" ></iframe>
+
+	<img src="<?php echo $attachment->guid ?>" style="width:100%;" />
 <?php
 	} else {
 		echo "Please add a PDF as attachment to this page"; 
