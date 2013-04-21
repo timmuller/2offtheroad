@@ -11,6 +11,8 @@ body {
 }
 .content {
 	font-family:		Courier New;
+	font-size:		13px;
+	color:			#595959;
 	background-color:	white;
 	padding:		10px;
 	padding-left:		60px;
@@ -124,4 +126,26 @@ h3 {
 #fullImage .modal-body {
 	max-height:	100%;
 }
-
+div.facts {
+	border:		1px solid #c0504d;
+	border-left:	7px solid #c0504d;
+	padding:	15px;
+}
+div.facts h3{
+	line-height:	12px;
+	font-size:	12px;
+	padding:	0px;
+}
+div.facts table {
+	font-size:	12px;
+}
+div.facts table tr td:first-child {
+	width:		80px;
+}
+div.article-footer {
+	text-align:center;
+}
+div.article-footer span {
+	display:	inline-block;
+	width: 		250px;
+}

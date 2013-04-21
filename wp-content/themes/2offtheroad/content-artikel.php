@@ -74,5 +74,9 @@
     </div>
   </div>
   <div class="clearfix"></div>
+  <div class="article-footer">
+    <span>Tekst: Corona <b>MCmuzisch</b></span>
+    <span>Fotografie: <b>Rahul Pandit</b></span>
+  </div>
 </article>
 
