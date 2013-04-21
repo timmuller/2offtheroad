@@ -33,9 +33,9 @@
 			$menu_content .= "<ul class=\"dropdown-menu\" aria-labelledby=\"drop1\" role=\"menu\">";
 			foreach ($parent_menu['submenu'] as $child_menu){
 				$menu_content .= "<li>";
-				$menu_content .= "<a href=\"". $child_menu->url ."\">";
+				$menu_content .= "<a href=\"". $child_menu->url ."\"><span>";
 				$menu_content .= $child_menu->title;
-				$menu_content .= "</a>";
+				$menu_content .= "</span></a>";
 				$menu_content .= "</li>";
 			}
 			$menu_content .= "</ul>";
