@@ -195,3 +195,44 @@ div.article-footer span {
 	font-size:	10px;
 }
 
+.storywrapper {
+	padding:	10px;
+  	-webkit-border-radius: 10px;
+     	-moz-border-radius: 10px;
+        border-radius: 10px;
+}
+.storywrapper .thumbnail {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:   auto 160px;
+	height:		150px;
+	width:		150px;
+	display:	inline-block;
+	border:0px solid black;
+}
+.storywrapper .title {
+	text-align:	center;
+	font-weight:	bold;
+}
+.storywrapper .date {
+	text-align:	center;
+	font-style:	italic;
+}
+.storywrapper a {
+	color: inherit;
+	text-decoration: none;
+}
+.storywrapper:hover {
+	background-color: #22bab1;
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #AAAAAA 200%);
+	color: blue;
+	box-shadow: 5px 5px 3px #777777;
+}
+.center {
+	text-align:center;
+}
+.thumbnailrow {
+	width:	740px;
+	display: inline-block;
+	text-align:left;
+}
