@@ -261,8 +261,10 @@ div.article-footer span {
 .bread_crumb li:last-child:after {
     content : '';
 }
-.blog h1{
-	
+.blog .date {
+	margin-left:	50px;
+	font-size:	14px;
+	font-style:	italic;
 }
 .blogcontent {
 	font-size:		12px;
