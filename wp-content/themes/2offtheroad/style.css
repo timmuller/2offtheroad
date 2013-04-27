@@ -1,8 +1,8 @@
 body {
 	font-family:	  verdana; 
 	color:		  #2f4f4f;
-	background-color: #22bab1;
-	background-image: -moz-linear-gradient(top, #22bab1 0%, #FFFFFF 175%);
+	background-color: #26c4bb;
+	background-image: -moz-linear-gradient(top, #26c4bb 0%, #FFFFFF 175%);
 	background-attachment: fixed;
 	height:100%;
 }
@@ -45,10 +45,12 @@ body {
 .content .columnleft {
 	float:			left;
 	width:			50%;
+	text-align:		justify;
 }
 .content .columnright {
 	float:			right;
 	width:			50%;
+	text-align:		justify;
 }
 .columnspacing {
 	margin:			30px;
@@ -155,6 +157,7 @@ div.facts h3{
 	line-height:	12px;
 	font-size:	12px;
 	padding:	0px;
+	padding-bottom: 10px;
 }
 div.facts table {
 	font-size:	12px;
@@ -182,5 +185,13 @@ div.article-footer span {
   background-color: inherit;
   background-image: none;
   filter: none;
+}
+
+.uppercase {
+	text-transform:		uppercase;
+}
+
+.footer-text {
+	font-size:	10px;
 }
 
