@@ -30,9 +30,25 @@ get_header();
       $attachments = get_posts($fetch_attachments);
       if ($attachments) {
         foreach ( $attachments as $attachment ) {
-	  $current_element['attach'] = $attachment;
+	  $current_element['attach'] = $attachment->guid;
+	  if($attachment){
+		break;
+	  }
 	}
       }
+	if(!$current_element['attach']){
+		ob_start();
+		the_content();
+		$content = ob_get_contents();
+		ob_end_clean();
+		if($content){
+			$pattern = "/<img.+?src=[\"'](.+?)[\"'].+?\/>/";
+			preg_match($pattern, $content, $matches);
+			if($matches){
+				$current_element['attach'] = $matches[1];
+			}
+		}
+ 	}
 	
 ?>
   <div class="storywrapper" style="display:inline-block">
@@ -45,7 +61,7 @@ get_header();
   <?php
  	} else {
   ?>
-      <?php echo $current_element['attach']->guid ?>
+      <?php echo $current_element['attach'] ?>
   <?php
 	}
   ?>
