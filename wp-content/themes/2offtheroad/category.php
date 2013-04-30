@@ -42,7 +42,7 @@ get_header();
 		$content = ob_get_contents();
 		ob_end_clean();
 		if($content){
-			$pattern = "/<img.+?src=[\"'](.+?)[\"'].+?\/>/";
+			$pattern = "/<img.+?src=[\"'](.+?)[\"'].+?\/?>/";
 			preg_match($pattern, $content, $matches);
 			if($matches){
 				$current_element['attach'] = $matches[1];
