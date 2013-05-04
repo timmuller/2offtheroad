@@ -73,7 +73,6 @@
     ?>
     </div>
   </div>
-  <div class="clearfix"></div>
   <div class="article-footer">
     <span class="uppercase footer-text">Tekst: <strong>Marco Coutz</strong></span>
     <span class="uppercase footer-text">Fotografie: <strong>Rahul Pandit</strong></span>
