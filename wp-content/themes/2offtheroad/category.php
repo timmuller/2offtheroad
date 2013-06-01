@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <h1>
-  Blog van : <?php  echo single_cat_title( '', false )?>
+  Blog van <?php  echo single_cat_title( '', false )?>
 </h1>
 <div class="center">
 <?php
