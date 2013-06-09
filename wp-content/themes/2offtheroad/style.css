@@ -213,10 +213,12 @@ div.article-footer span {
 }
 
 .storywrapper {
-	padding:	10px;
-  	-webkit-border-radius: 10px;
-     	-moz-border-radius: 10px;
-        border-radius: 10px;
+        vertical-align:		top;
+        width: 			150px;
+	padding:		10px;
+  	-webkit-border-radius: 	10px;
+     	-moz-border-radius: 	10px;
+        border-radius: 		10px;
 }
 .storywrapper .thumbnail {
 	background-position: center;
