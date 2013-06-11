@@ -30,7 +30,7 @@ get_header();
       $attachments = get_posts($fetch_attachments);
       if ($attachments) {
         foreach ( $attachments as $attachment ) {
-	  $current_element['attach'] = $attachment->guid;
+	  $current_element['attach'] = wp_get_attachment_thumb_url($attachment->ID);
 	  if($attachment){
 		break;
 	  }
