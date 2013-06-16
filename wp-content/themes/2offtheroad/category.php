@@ -3,8 +3,15 @@ get_header();
 ?>
 
 <h1>
-  Blog van <?php  echo single_cat_title( '', false )?>
+  <?php
+    $currentcat = get_category(get_query_var('cat'), false);
+    $parrentcat = $currentcat->category_parent;
+  ?>
+  <?php  echo single_cat_title( '', false )?> van <?php echo get_cat_name($parrentcat); ?>
 </h1>
+
+
+
 <div class="center">
 <?php
   $column  = 4;
