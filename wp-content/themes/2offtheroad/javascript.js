@@ -7,7 +7,9 @@ $(document).ready(function(){
 
         var image_src = $(modal_target).find('.pic_url').text();
         var img = $('<img src='+  image_src +'>').load(function(){
-          $(modal_target).find('.modal-body').html(img);
+          $(modal_target).find('img').remove();
+
+          $(modal_target).find('.modal-body').append(img);
           var image_width = this.width
           var image_height = this.height
           var ratio = image_width / image_height;
