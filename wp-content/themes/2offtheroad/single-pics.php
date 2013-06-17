@@ -4,7 +4,6 @@
         <div class="blogcontent">
           <?php the_content() ?>
         </div>
-
 <?php
 	$args = array(
 	'post_type' => 'attachment',
@@ -24,7 +23,7 @@
 	foreach($attachments as $attachment){
             $thumbnail_url = wp_get_attachment_thumb_url($attachment->ID);
 ?>
-            <div data-target="#picture<?php echo $attachment->ID ?>" class="storywrapper" style="display:inline-block">
+            <div data-target="#picture<?php echo $attachment->ID ?>" class="storywrapper" style="display:inline-block;cursor:pointer;">
             <div class="thumbnail" style="background-image:URL(
                 <?php echo $thumbnail_url ?>
             );">
@@ -34,6 +33,7 @@
 
             <div id="picture<?php echo $attachment->ID ?>" class="modal hide fade picture">
               <div class="modal-body">
+                <div class="close" data-dismiss="modal" aria-hidden="true">x</div>
                 <img src="<?php echo $attachment->guid ?>" />
               </div>
             </div>

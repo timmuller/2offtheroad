@@ -20,6 +20,16 @@ get_header();
     $stories[] = array('id' => get_the_ID(), 'title' => get_the_title(), 'date' => get_the_date(), 'url' => get_permalink());
   endwhile;
 
+  if(!$stories){
+?>
+    <br/>
+    <div class="alert alert-error">
+      Helaas kan er nog niets getoond worden op deze pagina.
+    </div>
+<?php
+    exit;
+  }
+
   $totalsize = sizeof($stories);
   $total_rows = ceil($totalsize / $column);
 
