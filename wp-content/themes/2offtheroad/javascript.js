@@ -5,8 +5,9 @@ $(document).ready(function(){
         var maxwidth = $(document).width() - padding;
         var maxheight = $(window).height() - padding;
 
-        var image_src = $(modal_target).find('img').attr('src');
-        $('<img src='+  image_src +'>').load(function(){
+        var image_src = $(modal_target).find('.pic_url').text();
+        var img = $('<img src='+  image_src +'>').load(function(){
+          $(modal_target).find('.modal-body').html(img);
           var image_width = this.width
           var image_height = this.height
           var ratio = image_width / image_height;
