@@ -18,7 +18,6 @@ $(document).ready(function(){
         var img = $('<img src='+  image_src +'>').load(function(){
           $(modal_target).find('img').remove();
 
-          return;
           $(modal_target).find('.modal-body').html(img);
           var image_width = this.width
           var image_height = this.height
