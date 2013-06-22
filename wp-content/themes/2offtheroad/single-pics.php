@@ -35,7 +35,7 @@
             </div>
 
 
-            <div id="picture<?php echo $attachment->ID ?>" class="modal hide fade picture">
+            <div id="picture<?php echo $attachment->ID ?>" class="modal hide picture">
               <div class="close" data-dismiss="modal" aria-hidden="true">x</div>
               <div class="pic_url" style="display:none"><?php echo $attachment->guid ?></div>
                 <div class="title"><?php echo $attachment->post_title ?></div>

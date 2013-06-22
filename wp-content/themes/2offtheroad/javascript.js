@@ -1,6 +1,18 @@
 $(document).ready(function(){
+    $('.modal').delegate('img', 'click', function(){
+        var next_modal_target = $(this).closest('.modal').next().attr('data-target');
+        show_image(next_modal_target);
+    });
+
     $('.storywrapper').bind('click', function(){
         var modal_target = $(this).attr('data-target');
+        show_image(modal_target);
+    });
+});
+
+
+function show_image(modal_target){
+        $('.modal').modal('hide');
         var padding = 40;
         var maxwidth = $(document).width() - padding;
         var maxheight = $(window).height() - padding;
@@ -55,5 +67,6 @@ $(document).ready(function(){
               'max-height': '100%'
           });
         });
-    });
-});
+
+}
+
