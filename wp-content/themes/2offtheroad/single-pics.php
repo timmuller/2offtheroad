@@ -29,16 +29,17 @@
                 <?php echo $thumbnail_url ?>
             );">
             </div>
+            <div class="title">
+                <?php echo $attachment->post_title ?>
+            </div>
             </div>
 
 
             <div id="picture<?php echo $attachment->ID ?>" class="modal hide fade picture">
               <div class="pic_url" style="display:none"><?php echo $attachment->guid ?></div>
+                <div class="title"><?php echo $attachment->post_title ?></div>
               <div class="modal-body">
                 <div class="close" data-dismiss="modal" aria-hidden="true">x</div>
-<!--
-                <img src="<?php echo $attachment->guid ?>" />
--->
               </div>
             </div>
 

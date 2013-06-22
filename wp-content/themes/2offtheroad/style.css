@@ -230,6 +230,7 @@ div.article-footer span {
 }
 .storywrapper .title {
 	text-align:	center;
+        word-wrap:      break-word;
 	font-weight:	bold;
 }
 .storywrapper .date {
@@ -368,4 +369,20 @@ div.article-footer span {
 }
 .commentlist .comment_content {
 	display:	block;
+}
+.modal .title {
+	position:	absolute;
+        text-align:	center;
+        width:		100%;
+	bottom:		15px;
+        color:		white;
+	font-weight:	bold;
+        z-index: 	1200;
+        opacity:	0.6;
+        filter:		alpha(opacity=60);
+}
+.modal .title:hover {
+	font-size:	18px;
+        opacity:	1;
+        filter:		alpha(opacity=100);
 }
