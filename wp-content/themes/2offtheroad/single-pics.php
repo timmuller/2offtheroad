@@ -7,12 +7,13 @@
 <?php
 	$args = array(
 	'post_type' => 'attachment',
+        'posts_per_page' => -1,
 	'numberposts' => null,
 	'post_status' => null,
 	'post_parent' => get_the_ID(),
         'post_mime_type' => 'image',
 	);
-	$attachments = get_posts($args);
+	$attachments = array_reverse(get_posts($args));
 
 	if (!$attachments) {
             echo "Er zijn geen afbeeldingen toegevoegd.";
