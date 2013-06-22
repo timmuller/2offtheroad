@@ -150,7 +150,7 @@ h3 {
 	margin-left: -30%;
 	width: 60%;
 }
-#fullImage .close, .modal-body .close {
+#fullImage .close, .modal .close {
 	position: absolute;
 	right:	  20px;
 	top:	  20px;
@@ -385,4 +385,8 @@ div.article-footer span {
 	font-size:	18px;
         opacity:	1;
         filter:		alpha(opacity=100);
+}
+.loading {
+        color:		white;
+	margin-top:	20px;
 }
