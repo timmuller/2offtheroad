@@ -381,7 +381,8 @@ div.article-footer span {
 .topbutton {
         cursor: pointer;
         margin-top:	20px;
-        margin-right:	20px;
+        margin-right:	10px;
+        margin-left:	10px;
 	color:	  black;
 	font-size: 50px;
 	opacity: 1;
@@ -392,6 +393,8 @@ div.article-footer span {
         color:		#000000;
 }
 .close {
+        position:	absolute;
+        right:		20px;
         background-image: URL('img/woocons/Stop.png');
         height:	30px;
         width: 30px;
