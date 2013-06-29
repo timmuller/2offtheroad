@@ -42,7 +42,11 @@ get_header();
       if(!$current_element){
 	break;
       }
-      
+     
+      $attachment_array = wp_get_attachment_image_src(get_post_thumbnail_id($current_element['id']), 'thumbnail');
+      $current_element['attach'] = $attachment_array[0];
+
+      if(!$current_element['attach']){
       $fetch_attachments = array( 'post_type' => 'attachment', 'post_parent' => $current_element['id'] );
       $attachments = get_posts($fetch_attachments);
       if ($attachments) {
@@ -52,6 +56,7 @@ get_header();
 		break;
 	  }
 	}
+      }
       }
 	if(!$current_element['attach']){
 		ob_start();
