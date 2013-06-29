@@ -1,7 +1,11 @@
 $(document).ready(function(){
-    $('.modal').delegate('img', 'click', function(){
+    $('.modal').delegate('.next_pic', 'click', function(){
         var next_modal_target = $(this).closest('.modal').next().attr('data-target');
         show_image(next_modal_target);
+    });
+    $('.modal').delegate('.prev_pic', 'click', function(){
+        var prev_modal_target = $(this).closest('.modal').prev('.storywrapper').prev('.modal').prev('.storywrapper').attr('data-target');
+        show_image(prev_modal_target);
     });
 
     $('.storywrapper').bind('click', function(){

@@ -36,7 +36,13 @@
 
 
             <div id="picture<?php echo $attachment->ID ?>" class="modal hide picture">
-              <div class="close" data-dismiss="modal" aria-hidden="true">x</div>
+              <div class="top-buttons">
+              <div class="topbutton close" data-dismiss="modal" aria-hidden="true">x</div>
+              <div class="topbutton center">
+                  <span class="prev_pic"></span>
+                  <span class="next_pic"></span>
+              </div>
+              </div>
               <div class="pic_url" style="display:none"><?php echo $attachment->guid ?></div>
                 <div class="title"><?php echo $attachment->post_title ?></div>
               <div class="modal-body">

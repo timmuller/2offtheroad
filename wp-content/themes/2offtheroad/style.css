@@ -145,22 +145,18 @@ h3 {
 	padding-right:	30px;
 }
 
-#fullImage {
-	top:	10px;
-	margin-left: -30%;
-	width: 60%;
+.top-buttons {
+  	position: 	absolute;
+        width:		100%;
+        z-index:	2000;
 }
-#fullImage .close, .modal .close {
-	position: absolute;
-	right:	  20px;
-	top:	  20px;
+.topbutton {
+        cursor: pointer;
+        margin-top:	20px;
+        margin-right:	20px;
 	color:	  black;
 	font-size: 50px;
 	opacity: 1;
-	z-index:  2000;
-}
-#fullImage .modal-body {
-	max-height:	100%;
 }
 div.facts {
 	border:		1px solid #c0504d;
@@ -389,4 +385,18 @@ div.article-footer span {
 .loading {
         color:		white;
 	margin-top:	20px;
+}
+.prev_pic {
+        background-image: URL('img/woocons/Button Previous.png');
+        height:	30px;
+        width: 30px;
+        background-repeat: no-repeat;
+        display: inline-block;
+}
+.next_pic {
+        background-image: URL('img/woocons/Button Next.png');
+        height:	30px;
+        width: 30px;
+        background-repeat: no-repeat;
+        display: inline-block;
 }
