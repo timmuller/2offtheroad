@@ -68,7 +68,7 @@
 <?php 
   if(get_post_type() == 'post') { 
 	  if ( function_exists( 'bread_crumb' ) ){
-		bread_crumb('author_label="boe"');
+		bread_crumb();
 	  }
   }
 ?>
