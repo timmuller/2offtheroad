@@ -37,10 +37,10 @@
 
             <div id="picture<?php echo $attachment->ID ?>" class="modal hide picture">
               <div class="top-buttons">
-              <div class="topbutton close" data-dismiss="modal" aria-hidden="true">x</div>
-              <div class="topbutton center">
-                  <span class="prev_pic"></span>
-                  <span class="next_pic"></span>
+              <div class="topbutton close" data-dismiss="modal" aria-hidden="true"></div>
+              <div class="center">
+                  <div class="topbutton prev_pic"></div>
+                  <div class="next_pic topbutton"></div>
               </div>
               </div>
               <div class="pic_url" style="display:none"><?php echo $attachment->guid ?></div>
