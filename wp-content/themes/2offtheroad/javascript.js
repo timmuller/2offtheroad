@@ -26,7 +26,7 @@ function show_image(modal_target){
         $(modal_target).find('.modal-body').html('<div class="loading center">Bezig met laden</div>');
         $(modal_target).modal().css({
           'background-color': '#2F4F4F',
-          'height': '100px'
+          'height': '150px'
         });
         $(modal_target).find('.modal-body').css({
             'max-height': '100%'
@@ -57,19 +57,6 @@ function show_image(modal_target){
                 'top': padding / 2,
   	        'margin-left': function () {return -($(this).width() / 2);}
           })
-          return
-  	  $(modal_target).modal('toggle').css({
-                'background-color': '#2F4F4F',
- 	        'width': width + 'px',
-                'height': height + 'px',
-                'max-height': height + 'px',
-                'padding-bottom': '10px',
-                'top': padding / 2,
-  	        'margin-left': function () {return -($(this).width() / 2);}
-  	  });
-          $(modal_target).find('.modal-body').css({
-              'max-height': '100%'
-          });
         });
 
 }
