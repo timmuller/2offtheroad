@@ -1,11 +1,26 @@
 $(document).ready(function(){
     $('.modal').delegate('.next_pic', 'click', function(){
-        var next_modal_target = $(this).closest('.modal').next().attr('data-target');
-        show_image(next_modal_target);
+        show_next_image();
     });
     $('.modal').delegate('.prev_pic', 'click', function(){
-        var prev_modal_target = $(this).closest('.modal').prev('.storywrapper').prev('.modal').prev('.storywrapper').attr('data-target');
-        show_image(prev_modal_target);
+        show_previous_image();
+    });
+
+    $(document).keydown(function(e){
+        key_enter = 13;
+        key_escape = 27;
+        key_spacebar = 32;
+        key_left = 37;
+        key_right = 39;
+    	if (e.keyCode == key_left) { 
+          show_previous_image()
+    	}
+        if (e.keyCode == key_right || e.keyCode == key_enter || e.keyCode == key_spacebar) {
+          show_next_image()
+        }
+        if (e.keyCode == key_escape) {
+          $('.modal').modal('hide');
+        }
     });
 
     $('.storywrapper').bind('click', function(){
@@ -14,6 +29,15 @@ $(document).ready(function(){
     });
 });
 
+
+function show_next_image(){
+        var next_modal_target = $('.modal.in').next().attr('data-target');
+        show_image(next_modal_target);
+}
+function show_previous_image(){
+        var prev_modal_target = $('.modal.in').prev('.storywrapper').prev('.modal').prev('.storywrapper').attr('data-target');
+        show_image(prev_modal_target);
+}
 
 function show_image(modal_target){
         $('.modal').modal('hide');
