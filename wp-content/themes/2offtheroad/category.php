@@ -7,18 +7,30 @@ get_header();
     $currentcat = get_category(get_query_var('cat'), false);
     $parrentcat = $currentcat->category_parent;
   ?>
-  <?php  echo single_cat_title( '', false )?> van <?php echo get_cat_name($parrentcat); ?>
+  <?php  
+    echo single_cat_title( '', false );
+    if($parrentcat){
+      echo " van " . get_cat_name($parrentcat); 
+    }
+  ?>
 </h1>
-
-
 
 <div class="center">
 <?php
   $column  = 4;
+  $args = array( 
+    'category' => $currentcat->cat_ID, 
+    'post_type' =>  'post', 
+    'posts_per_page' => -1    
+  ); 
+  $postslist = get_posts( $args );
+
   $stories = array();
-  while ( have_posts() ) : the_post();
-    $stories[] = array('id' => get_the_ID(), 'title' => get_the_title(), 'date' => get_the_date(), 'url' => get_permalink());
-  endwhile;
+
+  foreach ($postslist as $post){
+    $post_date = date("Y-m-d", strtotime($post->post_date));
+    $stories[] = array('id' => $post->ID, 'title' => $post->post_title, 'date' => $post_date, 'url' => $post->guid);
+  }
 
   if(!$stories){
 ?>
