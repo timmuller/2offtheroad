@@ -201,6 +201,7 @@ div.article-footer span {
   	-webkit-border-radius: 	10px;
      	-moz-border-radius: 	10px;
         border-radius: 		10px;
+	white-space:		normal;
 }
 .storywrapper .thumbnail {
 	background-position: center;
@@ -415,3 +416,24 @@ div.article-footer span {
         background-repeat: no-repeat;
         display: inline-block;
 }
+
+.categoryoutline {
+        padding:	20px;
+        width:		100%;
+        white-space: 	nowrap;
+        overflow-y:	hidden;
+        overflow-x:	auto;
+}
+.categoryoutline .category_item {
+	display:	inline-block;
+        white-space: 	normal;
+        border:		1px solid black;
+        width:		170px;
+}
+
+
+
+
+
+
+
