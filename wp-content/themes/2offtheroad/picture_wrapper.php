@@ -1,7 +1,15 @@
 <?php
+
+     if(!isset($show_date)){
+        $show_date = true;
+     }
+
      $thumbnail_url = wp_get_attachment_thumb_url($attachment->ID);
      if (!$thumbnail_url){
-     	$thumbnail_url = wp_get_attachment_image_src(get_post_thumbnail_id($attachment->ID, 'thumbnail'))[0]; 
+     	$array_thumb = wp_get_attachment_image_src(get_post_thumbnail_id($attachment->ID, 'thumbnail'));
+     	if($array_thumb){
+     	    $thumbnail_url = $array_thumb[0];
+     	}
      }
      if (!$thumbnail_url){
        $post_of_category = get_posts(array(
@@ -44,10 +52,14 @@
             <div class="title">
                 <?php echo $attachment->post_title ?>
             </div>
-	    <div class="date">
-		<?php echo $attachment->post_date ?>
-	    </div>
 <?php
+    if($show_date){
+?>
+            <div class="date">
+                <?php echo date("d-m-Y", strtotime($attachment->post_date)) ?>
+            </div>
+<?php
+    }
 	if($show_behaviour != 'popup'){
 ?>
 	</a>

@@ -21,6 +21,7 @@
 	}
 ?>
 <?php
+    $show_date = false;
 	foreach($attachments as $attachment){
 	    include('picture_wrapper.php');	
 	}

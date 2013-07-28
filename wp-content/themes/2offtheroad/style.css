@@ -197,11 +197,13 @@ div.article-footer span {
 .storywrapper {
         vertical-align:		top;
         width: 			150px;
-	padding:		10px;
-  	-webkit-border-radius: 	10px;
+
+	    padding:		10px;
+        padding-right:  17px;
+  	    -webkit-border-radius: 	10px;
      	-moz-border-radius: 	10px;
         border-radius: 		10px;
-	white-space:		normal;
+	    white-space:		normal;
 }
 .storywrapper .thumbnail {
 	background-position: center;
@@ -417,20 +419,35 @@ div.article-footer span {
         display: inline-block;
 }
 
-.categoryoutline {
-        padding:	20px;
-        width:		100%;
-        white-space: 	nowrap;
-        overflow-y:	hidden;
-        overflow-x:	auto;
-}
-.categoryoutline .category_item {
-	display:	inline-block;
-        white-space: 	normal;
-        border:		1px solid black;
-        width:		170px;
+.highlight-wrapper {
+        padding:                5px;
+        border:                 1px solid gray;
+    	-webkit-border-radius: 	10px;
+     	-moz-border-radius: 	10px;
+        border-radius: 	    	10px;
 }
 
+.highlight-title {
+
+    position:       relative;
+    padding-left:    50px;
+    font-size:      30px;
+    line-height:    50px;
+    font-weight:    bold;
+    border-bottom:  1px solid gray;
+}
+
+.categoryoutline {
+        width:		    100%;
+        white-space: 	nowrap;
+        overflow-y:	    hidden;
+        overflow-x:	    auto;
+        padding-bottom: 20px;
+}
+
+.categoryoutline .storywrapper:last-of-type {
+    margin-right:30px;
+}
 
 
 
