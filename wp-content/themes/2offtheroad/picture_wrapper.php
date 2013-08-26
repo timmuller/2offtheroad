@@ -49,9 +49,6 @@
                 <?php echo $thumbnail_url ?>
             );">
             </div>
-            <div class="title">
-                <?php echo $attachment->post_title ?>
-            </div>
 <?php
     if($show_date){
 ?>
@@ -60,6 +57,11 @@
             </div>
 <?php
     }
+?>
+            <div class="title">
+                <?php echo $attachment->post_title ?>
+            </div>
+<?php
 	if($show_behaviour != 'popup'){
 ?>
 	</a>
